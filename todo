@@ -1,0 +1,25 @@
+I need to ONLY map over the items that belong to a certain category 
+Use the new array created by filter to map over for the slideshow 
+
+  const filterCategory = (category) => {
+      const newItems = items.filter((item) => item.category === category); 
+      setCards(newItems)
+  };
+        - this needs to be in the same component as the card setup - have it in the home component and then pass it down to card setup?
+
+how will this work? I am not returning a component with all the menu items, I just want to create a new array with them
+
+but I am not mapping over the array when I set up the cards...I am simply using state to flick through them 
+- how do I know which data to flick through? I use the array of cardData...so set up a new array and set state to that 
+
+Filtering works!!!
+Now I need to make sure that the checkNumber function is working
+
+(css - different color for the different cards?)
+
+TO-DO 
+-have the starter card as the only thing visible until someone clicks on one of the categories - how would I do this?
+-have the card as a different component set to position absolute infront of the other cards, 
+
+-push the main page to the side when opening up the sidebar BUT this means that the useState will have 
+to start in the home page which I then pass into SideBar (that's all)
