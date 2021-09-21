@@ -1,10 +1,13 @@
 import styled from "styled-components";
+import { device } from "../../globals/breakpoints";
 
 export const ConversationCardStyles = styled.div`
-  width: 30rem;
-  height: 16.8rem;
+  width: 20rem;
+  height: 12.8rem;
+
   margin: 0 auto;
   border-radius: 10px;
+  position: relative;
 
   display: flex;
   align-items: center;
@@ -12,6 +15,11 @@ export const ConversationCardStyles = styled.div`
   flex-direction: column;
 
   box-shadow: 10px 10px 8px #888888;
+
+  @media ${device.sm} {
+    width: 30rem;
+    height: 16.8rem;
+  }
 
   background-color: ${({ category }) => {
     if (category === "relationships") {
@@ -25,9 +33,11 @@ export const ConversationCardStyles = styled.div`
 `;
 
 export const CardTextStyles = styled.p`
-  width: 22.75rem;
+  font-size: 2.8vh;
+  width: 15.75rem;
+
   font-family: "Oswald", sans-serif;
-  font-size: 3.3vh;
+
   letter-spacing: -1px;
   font-weight: 400;
   text-align: justify;
@@ -36,6 +46,10 @@ export const CardTextStyles = styled.p`
   margin-top: 2rem;
   margin-bottom: 2.8rem;
   position: absolute;
+
+  @media ${device.sm} {
+    width: 22.75rem;
+  }
 `;
 
 export const CategoryTextStyles = styled.p`
@@ -46,6 +60,6 @@ export const CategoryTextStyles = styled.p`
   font-weight: 200;
 
   position: absolute;
-  bottom: 35%;
+  bottom: 7%;
   text-align: center;
 `;

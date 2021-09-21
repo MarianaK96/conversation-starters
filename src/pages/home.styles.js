@@ -4,7 +4,8 @@ export const HomeStyles = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 10rem;
-  justify-content: center;
+  align-items: center;
+  position: relative;
 `;
 
 export const TestLinkStyles = styled.div`

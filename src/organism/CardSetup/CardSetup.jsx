@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import ConversationCard from "../../molecules/ConversationCard/ConversationCard";
+import StarterCard from "../../molecules/StarterCard/StarterCard";
 import { NextIcon, PrevIcon } from "../../molecules/NextIcon/NextIcon.jsx";
 import { cardData } from "../../cardData";
 import {
@@ -9,7 +10,7 @@ import {
   IconStyles,
 } from "./CardSetup.styles";
 
-const CardSetup = ({ cards }) => {
+const CardSetup = ({ cards, cardVisible, setCardVisible }) => {
   const [index, setIndex] = useState(0);
   // const [cards, setCards] = useState(cardData);
   const { question, category } = cards[index];
@@ -49,6 +50,10 @@ const CardSetup = ({ cards }) => {
   return (
     <>
       <CardSetupStyles>
+        <StarterCard
+          cardVisible={cardVisible}
+          setCardVisible={setCardVisible}
+        />
         <ConversationCard question={question} category={category} />
         <IconStyles>
           <NextIconStyles onClick={prevCard}>

@@ -18,8 +18,4 @@ Now I need to make sure that the checkNumber function is working
 (css - different color for the different cards?)
 
 TO-DO 
--have the starter card as the only thing visible until someone clicks on one of the categories - how would I do this?
--have the card as a different component set to position absolute infront of the other cards, 
-
--push the main page to the side when opening up the sidebar BUT this means that the useState will have 
-to start in the home page which I then pass into SideBar (that's all)
+1. sort out the issue with the text in the side bar during the transitions - fixed width of parent element 

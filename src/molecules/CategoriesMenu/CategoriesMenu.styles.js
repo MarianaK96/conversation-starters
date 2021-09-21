@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import { device } from "../../globals/breakpoints";
 
 export const MenuBtnStyles = styled.div`
   padding-bottom: 5rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 
   opacity: ${({ cardVisible }) => (cardVisible ? "0" : "1")};
   transition: opacity 1s ease;
@@ -13,12 +14,15 @@ export const MenuBtnStyles = styled.div`
     border: none;
     background-color: transparent;
     font-family: "Montserrat", sans-serif;
-    font-size: 1.2rem;
-    margin-right: 1rem;
+    font-size: 1rem;
     cursor: pointer;
     padding: 0.3rem;
 
     text-transform: capitalize;
+
+    @media ${device.sm} {
+      font-size: 1.2rem;
+    }
   }
 
   & > button:hover {

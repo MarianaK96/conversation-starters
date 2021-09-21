@@ -1,11 +1,17 @@
 import styled from "styled-components";
+import { device } from "../../globals/breakpoints";
 
 export const CardSetupStyles = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   flex-direction: column;
-  width: 482px;
+  width: 325px;
+  position: relative;
+
+  @media ${device.sm} {
+    width: 482px;
+  }
 `;
 
 export const NextIconStyles = styled.div`

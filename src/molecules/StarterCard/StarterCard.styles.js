@@ -1,14 +1,15 @@
 import styled from "styled-components";
+import { device } from "../../globals/breakpoints";
 
 export const StarterCardStyles = styled.div`
-  width: 30rem;
-  height: 16.8rem;
+  width: 20rem;
+  height: 12.8rem;
   margin: 0 auto;
   border-radius: 10px;
   background-color: #242222;
   position: absolute;
   z-index: 10;
-  bottom: 34%;
+  top: 0;
 
   display: flex;
   align-items: center;
@@ -21,10 +22,15 @@ export const StarterCardStyles = styled.div`
 
   opacity: ${({ cardVisible }) => (cardVisible ? "1" : "0")};
   transition: opacity 1s ease;
+
+  @media ${device.sm} {
+    width: 30rem;
+    height: 16.8rem;
+  }
 `;
 
 export const StarterCardTextStyles = styled.p`
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-style: italic;
   font-family: "Teko", sans-serif;
   color: #ffffff;
@@ -32,4 +38,8 @@ export const StarterCardTextStyles = styled.p`
   text-align: center;
   margin: 0;
   line-height: 1.3;
+
+  @media ${device.sm} {
+    font-size: 4.5rem;
+  }
 `;

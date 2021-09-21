@@ -36,11 +36,11 @@ const Home = () => {
             cardVisible={cardVisible}
             setCardVisible={setCardVisible}
           />
-          <StarterCard
+          <CardSetup
+            cards={cards}
             cardVisible={cardVisible}
             setCardVisible={setCardVisible}
           />
-          <CardSetup cards={cards} />
         </HomeStyles>
       </Wrapper>
     </>
@@ -50,3 +50,10 @@ const Home = () => {
 export default Home;
 
 //TO-DO
+
+{
+  /* <StarterCard
+cardVisible={cardVisible}
+setCardVisible={setCardVisible}
+/> */
+}
